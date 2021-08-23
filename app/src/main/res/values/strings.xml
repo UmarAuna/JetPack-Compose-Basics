@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hello World</string>
+    <string name="title_activity_compose_basics">ComposeBasics</string>
+    <string name="title_activity_compose_recipes">ComposeRecipes</string>
+</resources>
