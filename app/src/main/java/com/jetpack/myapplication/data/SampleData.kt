@@ -1,4 +1,6 @@
-package com.jetpack.myapplication
+package com.jetpack.myapplication.data
+
+import com.jetpack.myapplication.codelabs.Message
 
 object SampleData {
     // Sample conversation data
