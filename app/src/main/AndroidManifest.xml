@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jetpack.myapplication">
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,9 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloWorld">
         <activity
-            android:name=".ComposeBasics"
+            android:name=".codelabs.ComposeLayouts"
             android:exported="true"
-            android:label="@string/title_activity_compose_basics"
+            android:label="@string/title_activity_compose_layouts"
+            android:theme="@style/Theme.HelloWorld.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".planets.PlanetDetails"
+            android:exported="true"
+            android:label="@string/title_activity_planet_details"
+            android:theme="@style/Theme.HelloWorld.NoActionBar" />
+        <activity
+            android:name=".planets.PlanetsActivity"
+            android:exported="true"
+            android:label="@string/title_activity_planets"
             android:theme="@style/Theme.HelloWorld.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +32,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".codelabs.ComposeBasics"
+            android:exported="true"
+            android:label="@string/title_activity_compose_basics"
+            android:theme="@style/Theme.HelloWorld.NoActionBar" />
+        <activity
+            android:name=".codelabs.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.HelloWorld.NoActionBar">

@@ -1,4 +1,4 @@
-package com.jetpack.myapplication
+package com.jetpack.myapplication.codelabs
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

@@ -1,4 +1,4 @@
-package com.jetpack.myapplication
+package com.jetpack.myapplication.codelabs
 
 import android.content.res.Configuration
 import android.os.Bundle
@@ -23,6 +23,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.jetpack.myapplication.R
+import com.jetpack.myapplication.data.SampleData
 import com.jetpack.myapplication.ui.theme.HelloWorldTheme
 
 class MainActivity : ComponentActivity() {

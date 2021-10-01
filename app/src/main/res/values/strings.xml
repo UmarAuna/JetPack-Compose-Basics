@@ -2,4 +2,7 @@
     <string name="app_name">Hello World</string>
     <string name="title_activity_compose_basics">ComposeBasics</string>
     <string name="title_activity_compose_recipes">ComposeRecipes</string>
+    <string name="title_activity_planets">PlanetsActivity</string>
+    <string name="title_activity_planet_details">PlanetDetails</string>
+    <string name="title_activity_compose_layouts">ComposeLayouts</string>
 </resources>
