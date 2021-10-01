@@ -1,13 +1,20 @@
 package com.jetpack.myapplication.planets
 
+import android.app.Activity
 import android.content.res.Configuration
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -17,38 +24,52 @@ import com.jetpack.myapplication.ui.theme.HelloWorldTheme
 
 @Composable
 fun PlanetScreen(planet: Planets) {
+    val scrollState = rememberScrollState()
+    val activity = (LocalContext.current as? Activity)
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(5.dp)
+            .padding(2.dp)
     ) {
-        Image(
-            painter = painterResource(id = planet.icon),
-            contentDescription = planet.planetName,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(400.dp)
-        )
+        IconButton(onClick = {
+            activity?.finish()
+        }) {
+            Icon(Icons.Filled.ArrowBack, contentDescription = null)
+        }
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
+                .padding(5.dp)
+                .verticalScroll(scrollState)
         ) {
-            Text(
-                planet.planetName,
-                color = MaterialTheme.colors.onSurface,
-                style = MaterialTheme.typography.h5,
-                fontFamily = FontFamily.Monospace,
-                fontWeight = FontWeight.Bold
+            Image(
+                painter = painterResource(id = planet.icon),
+                contentDescription = planet.planetName,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(400.dp)
             )
-            Spacer(modifier = Modifier.height(5.dp))
-            PlanetDetailText("Surface Temperature", planet.surfaceTemperature)
-            PlanetDetailText("Discovery", planet.discovery)
-            PlanetDetailText("Named", planet.originOfName)
-            PlanetDetailText("Diameter", planet.diameter)
-            PlanetDetailText("Orbit", planet.orbit)
-            PlanetDetailText("Days", planet.days)
-            PlanetDetailText("Moon", planet.moon.toString())
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
+            ) {
+                Text(
+                    planet.planetName,
+                    color = MaterialTheme.colors.onSurface,
+                    style = MaterialTheme.typography.h5,
+                    fontFamily = FontFamily.Monospace,
+                    fontWeight = FontWeight.Bold
+                )
+                Spacer(modifier = Modifier.height(5.dp))
+                PlanetDetailText("Surface Temperature", planet.surfaceTemperature)
+                PlanetDetailText("Discovery", planet.discovery)
+                PlanetDetailText("Named", planet.originOfName)
+                PlanetDetailText("Diameter", planet.diameter)
+                PlanetDetailText("Orbit", planet.orbit)
+                PlanetDetailText("Days", planet.days)
+                PlanetDetailText("Moon", planet.moon.toString())
+            }
         }
     }
 }
@@ -79,14 +100,14 @@ fun PlanetDetailText(planetHolder: String, planetText: String, modifier: Modifie
 
 @Preview(
     showBackground = true,
-    showSystemUi = true,
+    //  showSystemUi = true,
     uiMode = Configuration.UI_MODE_NIGHT_NO,
     name = "Light Mode"
 )
 @Composable
 @Preview(
     showBackground = true,
-    showSystemUi = true,
+    //  showSystemUi = true,
     uiMode = Configuration.UI_MODE_NIGHT_YES,
     name = "Dark Mode"
 )
