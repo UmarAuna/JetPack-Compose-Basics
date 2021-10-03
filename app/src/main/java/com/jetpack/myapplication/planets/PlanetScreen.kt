@@ -14,10 +14,12 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.jetpack.myapplication.R
 import com.jetpack.myapplication.ui.theme.HelloWorldTheme
 
 @Composable
@@ -60,13 +62,13 @@ fun PlanetScreen(planet: Planets) {
                     fontWeight = FontWeight.Bold
                 )
                 Spacer(modifier = Modifier.height(5.dp))
-                PlanetDetailText("Surface Temperature", planet.surfaceTemperature)
-                PlanetDetailText("Discovery", planet.discovery)
-                PlanetDetailText("Named", planet.originOfName)
-                PlanetDetailText("Diameter", planet.diameter)
-                PlanetDetailText("Orbit", planet.orbit)
-                PlanetDetailText("Days", planet.days)
-                PlanetDetailText("Moon", planet.moon.toString())
+                PlanetDetailText(stringResource(R.string.surface_temperature), planet.surfaceTemperature)
+                PlanetDetailText(stringResource(R.string.discovery), planet.discovery)
+                PlanetDetailText(stringResource(R.string.named), planet.originOfName)
+                PlanetDetailText(stringResource(R.string.diameter), planet.diameter)
+                PlanetDetailText(stringResource(R.string.orbit), planet.orbit)
+                PlanetDetailText(stringResource(R.string.days), planet.days)
+                PlanetDetailText(stringResource(R.string.moon), planet.moon.toString())
             }
         }
     }

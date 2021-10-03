@@ -5,4 +5,17 @@
     <string name="title_activity_planets">PlanetsActivity</string>
     <string name="title_activity_planet_details">PlanetDetails</string>
     <string name="title_activity_compose_layouts">ComposeLayouts</string>
+    <string name="good_night">Good Night, Do you know that Neptune is the coldest planet with -201 °C</string>
+    <string name="good_afternoon">Good Afternoon, Do you know that Venus is the hottest planet with 462 °C</string>
+    <string name="good_morning">"Good Morning, Do you know that planet Jupiter has 9.8 Earth hours"</string>
+    <string name="good_evening">Good Evening, Do you know planet %s has the highest Moons with %d moons.</string>
+    <string name="hello">Hello</string>
+    <string name="planets">Planets</string>
+    <string name="surface_temperature">Surface Temperature</string>
+    <string name="discovery">Discovery</string>
+    <string name="named">Named</string>
+    <string name="diameter">Diameter</string>
+    <string name="orbit">Orbit</string>
+    <string name="days">Days</string>
+    <string name="moon">Moon</string>
 </resources>
