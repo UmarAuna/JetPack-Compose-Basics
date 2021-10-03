@@ -24,9 +24,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.jetpack.myapplication.R
 import com.jetpack.myapplication.planets.ui.theme.PlanetTheme
 import java.util.*
 
@@ -55,7 +57,7 @@ fun showToast(context: Context, msg: String) {
 fun PlanetsList(planets: List<Planets>) {
     Column() {
         Text(
-            text = "Planets",
+            text = stringResource(R.string.planets),
             style = MaterialTheme.typography.h4,
             modifier = Modifier.padding(10.dp)
         )
@@ -78,23 +80,24 @@ fun PlanetsList(planets: List<Planets>) {
     }
 }
 
+@Composable
 private fun getGreetingMessage(planet: Planets?): String {
     val c = Calendar.getInstance()
     val timeOfDay = c.get(Calendar.HOUR_OF_DAY)
     return when (timeOfDay) {
         in 0..11 -> {
-            "Good Morning, Do you know that planet Jupiter has 9.8 Earth hours "
+            stringResource(R.string.good_morning)
         }
         in 12..15 -> {
-            "Good Afternoon, Do you know that Venus is the hottest planet with 462 °C"
+            stringResource(R.string.good_afternoon)
         }
         in 16..20 -> {
-            "Good Evening, Do you know planet ${planet?.planetName} has the highest Moons with ${planet?.moon} moons."
+            stringResource(R.string.good_evening, planet?.planetName!!, planet.moon)
         }
         in 21..23 -> {
-            "Good Night, Do you know that Neptune is the coldest planet with -201 °C "
+            stringResource(R.string.good_night)
         }
-        else -> "Hello"
+        else -> stringResource(R.string.hello)
     }
 }
 
