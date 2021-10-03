@@ -7,7 +7,7 @@ object PlanetData {
         Planets(
             planetName = "Mercury",
             icon = R.drawable.mercury,
-            surfaceTemperature = "-173 - 427 C",
+            surfaceTemperature = "-173 - 427 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for the messenger of the Roman gods",
             diameter = " 3,031 miles (4,878 km)",
@@ -18,7 +18,7 @@ object PlanetData {
         Planets(
             planetName = "Venus",
             icon = R.drawable.venus,
-            surfaceTemperature = "462 C",
+            surfaceTemperature = "462 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for the Roman goddess of love and beauty",
             diameter = "7,521 miles (12,104 km)",
@@ -29,7 +29,7 @@ object PlanetData {
         Planets(
             planetName = "Earth",
             icon = R.drawable.earth,
-            surfaceTemperature = " -88 - 58 C",
+            surfaceTemperature = " -88 - 58 °C",
             discovery = "",
             originOfName = "Die Erde,\" the German word for \"the ground.",
             diameter = "7,926 miles (12,760 km)",
@@ -40,7 +40,7 @@ object PlanetData {
         Planets(
             planetName = "Mars",
             icon = R.drawable.mars,
-            surfaceTemperature = "-63 C",
+            surfaceTemperature = "-63 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for the Roman god of wa",
             diameter = "4,217 miles (6,787 km)",
@@ -51,7 +51,7 @@ object PlanetData {
         Planets(
             planetName = "Jupiter",
             icon = R.drawable.jupiter,
-            surfaceTemperature = "-108 C",
+            surfaceTemperature = "-108 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for the ruler of the Roman gods",
             diameter = "86,881 miles (139,822 km)",
@@ -62,7 +62,7 @@ object PlanetData {
         Planets(
             planetName = "Saturn",
             icon = R.drawable.saturn,
-            surfaceTemperature = "-139 C",
+            surfaceTemperature = "-139 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for Roman god of agriculture",
             diameter = "74,900 miles (120,500 km)",
@@ -73,7 +73,7 @@ object PlanetData {
         Planets(
             planetName = "Uranus",
             icon = R.drawable.uranus,
-            surfaceTemperature = "-197",
+            surfaceTemperature = "-197 °C",
             discovery = "1781 by William Herschel (was originally thought to be a star)",
             originOfName = "Named for the personification of heaven in ancient myth",
             diameter = " 31,763 miles (51,120 km)",
@@ -84,7 +84,7 @@ object PlanetData {
         Planets(
             planetName = "Neptune",
             icon = R.drawable.neptune,
-            surfaceTemperature = "-201 C",
+            surfaceTemperature = "-201 °C",
             discovery = "1846",
             originOfName = "Named for the Roman god of water",
             diameter = "30,775 miles (49,530 km)",
@@ -98,7 +98,7 @@ object PlanetData {
         Planets(
             planetName = "Mercury",
             icon = R.drawable.ic_planet_mercury,
-            surfaceTemperature = "-173 - 427 C",
+            surfaceTemperature = "-173 - 427 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for the messenger of the Roman gods",
             diameter = " 3,031 miles (4,878 km)",
@@ -109,7 +109,7 @@ object PlanetData {
         Planets(
             planetName = "Venus",
             icon = R.drawable.ic_planet_venus,
-            surfaceTemperature = "462 C",
+            surfaceTemperature = "462 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for the Roman goddess of love and beauty",
             diameter = "7,521 miles (12,104 km)",
@@ -120,7 +120,7 @@ object PlanetData {
         Planets(
             planetName = "Earth",
             icon = R.drawable.ic_planet_earth,
-            surfaceTemperature = " -88 - 58 C",
+            surfaceTemperature = " -88 - 58 °C",
             discovery = "",
             originOfName = "Die Erde,\" the German word for \"the ground.",
             diameter = "7,926 miles (12,760 km)",
@@ -131,7 +131,7 @@ object PlanetData {
         Planets(
             planetName = "Mars",
             icon = R.drawable.ic_planet_mars,
-            surfaceTemperature = "-63 C",
+            surfaceTemperature = "-63 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for the Roman god of wa",
             diameter = "4,217 miles (6,787 km)",
@@ -142,7 +142,7 @@ object PlanetData {
         Planets(
             planetName = "Jupiter",
             icon = R.drawable.ic_planet_jupiter,
-            surfaceTemperature = "-108 C",
+            surfaceTemperature = "-108 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for the ruler of the Roman gods",
             diameter = "86,881 miles (139,822 km)",
@@ -153,7 +153,7 @@ object PlanetData {
         Planets(
             planetName = "Saturn",
             icon = R.drawable.ic_planet_saturn,
-            surfaceTemperature = "-139 C",
+            surfaceTemperature = "-139 °C",
             discovery = "Known to the ancient Greeks and visible to the naked eye",
             originOfName = "Named for Roman god of agriculture",
             diameter = "74,900 miles (120,500 km)",
@@ -164,7 +164,7 @@ object PlanetData {
         Planets(
             planetName = "Uranus",
             icon = R.drawable.ic_planet_uranus,
-            surfaceTemperature = "-197",
+            surfaceTemperature = "-197 °C",
             discovery = "1781 by William Herschel (was originally thought to be a star)",
             originOfName = "Named for the personification of heaven in ancient myth",
             diameter = " 31,763 miles (51,120 km)",
@@ -175,7 +175,7 @@ object PlanetData {
         Planets(
             planetName = "Neptune",
             icon = R.drawable.ic_planet_neptune,
-            surfaceTemperature = "-201 C",
+            surfaceTemperature = "-201 °C",
             discovery = "1846",
             originOfName = "Named for the Roman god of water",
             diameter = "30,775 miles (49,530 km)",
@@ -188,7 +188,7 @@ object PlanetData {
     val singlePlanet = Planets(
         planetName = "Saturn",
         icon = R.drawable.ic_planet_saturn,
-        surfaceTemperature = "-139 C",
+        surfaceTemperature = "-139 °C",
         discovery = "Known to the ancient Greeks and visible to the naked eye",
         originOfName = "Named for Roman god of agriculture",
         diameter = "74,900 miles (120,500 km)",

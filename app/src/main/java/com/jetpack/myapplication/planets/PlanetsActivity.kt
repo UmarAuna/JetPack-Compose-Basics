@@ -28,6 +28,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jetpack.myapplication.planets.ui.theme.PlanetTheme
+import java.util.*
 
 class PlanetsActivity : ComponentActivity() {
     @ExperimentalMaterialApi
@@ -58,6 +59,15 @@ fun PlanetsList(planets: List<Planets>) {
             style = MaterialTheme.typography.h4,
             modifier = Modifier.padding(10.dp)
         )
+
+        val planet = planets.maxByOrNull { it.moon }
+
+        Text(
+            text = getGreetingMessage(planet),
+            style = MaterialTheme.typography.h6,
+            modifier = Modifier.padding(10.dp)
+        )
+
         LazyColumn() {
             items(planets) { planet ->
                 // PlanetView(planet)
@@ -65,6 +75,26 @@ fun PlanetsList(planets: List<Planets>) {
                 PlanetImageList(planet)
             }
         }
+    }
+}
+
+private fun getGreetingMessage(planet: Planets?): String {
+    val c = Calendar.getInstance()
+    val timeOfDay = c.get(Calendar.HOUR_OF_DAY)
+    return when (timeOfDay) {
+        in 0..11 -> {
+            "Good Morning, Do you know that planet Jupiter has 9.8 Earth hours "
+        }
+        in 12..15 -> {
+            "Good Afternoon, Do you know that Venus is the hottest planet with 462 °C"
+        }
+        in 16..20 -> {
+            "Good Evening, Do you know planet ${planet?.planetName} has the highest Moons with ${planet?.moon} moons."
+        }
+        in 21..23 -> {
+            "Good Night, Do you know that Neptune is the coldest planet with -201 °C "
+        }
+        else -> "Hello"
     }
 }
 
@@ -295,7 +325,10 @@ fun DialogDemo(showDialog: Boolean, setShowDialog: (Boolean) -> Unit, planet: Pl
                 }
             },
             text = {
-                Column(modifier = Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally,) {
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
 
                     Text(
                         "Surface Temperature : ${planet.surfaceTemperature}",
