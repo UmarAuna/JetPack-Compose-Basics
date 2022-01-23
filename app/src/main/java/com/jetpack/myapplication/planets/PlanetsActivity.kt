@@ -17,7 +17,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -38,11 +38,8 @@ class PlanetsActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             PlanetTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(color = MaterialTheme.colors.background) {
-                    // PlanetsList(planets = PlanetData.planetsList)
-                    PlanetsList(planets = PlanetData.planetsListVector)
-                }
+                // PlanetsList(planets = PlanetData.planetsList)
+                PlanetsList(planets = PlanetData.planetsListVector)
             }
         }
     }
@@ -55,26 +52,29 @@ fun showToast(context: Context, msg: String) {
 @ExperimentalMaterialApi
 @Composable
 fun PlanetsList(planets: List<Planets>) {
-    Column() {
-        Text(
-            text = stringResource(R.string.planets),
-            style = MaterialTheme.typography.h4,
-            modifier = Modifier.padding(10.dp)
-        )
+    // A surface container using the 'background' color from the theme
+    Surface(color = MaterialTheme.colors.background) {
+        Column() {
+            Text(
+                text = stringResource(R.string.planets),
+                style = MaterialTheme.typography.h4,
+                modifier = Modifier.padding(10.dp)
+            )
 
-        val planet = planets.maxByOrNull { it.moon }
+            val planet = planets.maxByOrNull { it.moon }
 
-        Text(
-            text = getGreetingMessage(planet),
-            style = MaterialTheme.typography.h6,
-            modifier = Modifier.padding(10.dp)
-        )
+            Text(
+                text = getGreetingMessage(planet),
+                style = MaterialTheme.typography.h6,
+                modifier = Modifier.padding(10.dp)
+            )
 
-        LazyColumn() {
-            items(planets) { planet ->
-                // PlanetView(planet)
-                // PlanetsListVector(planet)
-                PlanetImageList(planet)
+            LazyColumn() {
+                items(planets) { planet ->
+                    // PlanetView(planet)
+                    // PlanetsListVector(planet)
+                    PlanetImageList(planet)
+                }
             }
         }
     }
@@ -95,6 +95,8 @@ private fun getGreetingMessage(planet: Planets?): String {
             stringResource(R.string.good_evening, planet?.planetName!!, planet.moon)
         }
         in 21..23 -> {
+            // vectorResource()
+            // colorResource()
             stringResource(R.string.good_night)
         }
         else -> stringResource(R.string.hello)
@@ -106,7 +108,7 @@ private fun getGreetingMessage(planet: Planets?): String {
 fun PlanetsListVector(planet: Planets) {
 
     val context = LocalContext.current
-    val (showDialog, setShowDialog) = remember { mutableStateOf(false) }
+    val (showDialog, setShowDialog) = rememberSaveable { mutableStateOf(false) }
     Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
         Card(
             modifier = Modifier
@@ -425,11 +427,8 @@ fun Greeting4(name: String) {
 )
 fun DefaultPreview3() {
     PlanetTheme {
-        // A surface container using the 'background' color from the theme
-        Surface(color = MaterialTheme.colors.background) {
-            // PlanetsList(planets = PlanetData.planetsList)
-            PlanetsList(planets = PlanetData.planetsListVector)
-        }
+        // PlanetsList(planets = PlanetData.planetsList)
+        PlanetsList(planets = PlanetData.planetsListVector)
     }
   /*  MyApp {
         *//*val list = listOf("Lollipop", "Marshmallow", "Nougat",

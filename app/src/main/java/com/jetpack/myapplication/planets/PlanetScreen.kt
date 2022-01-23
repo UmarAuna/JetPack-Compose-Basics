@@ -2,15 +2,21 @@ package com.jetpack.myapplication.planets
 
 import android.app.Activity
 import android.content.res.Configuration
+import android.graphics.drawable.Icon
+import android.graphics.fonts.FontFamily
+import android.media.Image
+import android.view.Surface
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -20,7 +26,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.jetpack.myapplication.R
-import com.jetpack.myapplication.ui.theme.HelloWorldTheme
+import com.jetpack.myapplication.planets.ui.theme.PlanetTheme
+import org.w3c.dom.Text
 
 @Composable
 fun PlanetScreen(planet: Planets) {
@@ -59,7 +66,7 @@ fun PlanetScreen(planet: Planets) {
                     color = MaterialTheme.colors.onSurface,
                     style = MaterialTheme.typography.h5,
                     fontFamily = FontFamily.Monospace,
-                    fontWeight = FontWeight.Bold
+                    fontWeight = FontWeight.Bold,
                 )
                 Spacer(modifier = Modifier.height(5.dp))
                 PlanetDetailText(stringResource(R.string.surface_temperature), planet.surfaceTemperature)
@@ -85,7 +92,7 @@ fun PlanetDetailText(planetHolder: String, planetText: String, modifier: Modifie
             planetHolder,
             style = MaterialTheme.typography.caption,
             color = MaterialTheme.colors.onSurface,
-            fontFamily = FontFamily.SansSerif
+            fontFamily = FontFamily.SansSerif,
         )
     }
     Spacer(modifier.height(2.dp))
@@ -112,11 +119,34 @@ fun PlanetDetailText(planetHolder: String, planetText: String, modifier: Modifie
     name = "Dark Mode"
 )
 fun PlanetDetailPreview() {
-    HelloWorldTheme {
-        // A surface container using the 'background' color from the theme
+    PlanetTheme {
+        // A surface container using the 'background'color from the theme
         Surface(color = MaterialTheme.colors.background) {
             val planets = PlanetData.singlePlanet
             PlanetScreen(planets)
+        }
+    }
+}
+
+@Preview(
+    showBackground = true,
+    //  showSystemUi = true,
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    name = "Light Mode"
+)
+@ExperimentalAnimationApi
+@Composable
+fun JetpackCompose() {
+    Card {
+        var expanded by remember { mutableStateOf(false) }
+        Column(Modifier.padding(16.dp).clickable { expanded = !expanded }) {
+            Image(painterResource(id = R.drawable.ic_planet_neptune), contentDescription = null)
+            AnimatedVisibility(visible = expanded) {
+                Text(
+                    text = "Neptune",
+                    style = MaterialTheme.typography.h2
+                )
+            }
         }
     }
 }

@@ -40,6 +40,7 @@ class ComposeLayouts : ComponentActivity() {
 }
 
 @Composable
+@Preview
 fun PhotographCard(modifier: Modifier = Modifier) {
     Row(
         modifier
