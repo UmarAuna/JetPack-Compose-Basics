@@ -33,7 +33,8 @@ import com.jetpack.myapplication.planets.ui.theme.PlanetTheme
 import java.util.*
 
 class PlanetsActivity : ComponentActivity() {
-    @ExperimentalMaterialApi
+
+    @OptIn(ExperimentalMaterialApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {

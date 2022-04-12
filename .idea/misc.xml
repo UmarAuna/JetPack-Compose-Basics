@@ -81,6 +81,11 @@
         <entry key="../../../../layout/compose-model-1639177216576.xml" value="0.13586758821389597" />
         <entry key="../../../../layout/compose-model-1639217784703.xml" value="0.13586758821389597" />
         <entry key="../../../../layout/compose-model-1639259445257.xml" value="0.13586758821389597" />
+        <entry key="../../../../layout/compose-model-1645468564200.xml" value="0.27560795873249816" />
+        <entry key="../../../../layout/compose-model-1645468582227.xml" value="0.15635451505016723" />
+        <entry key="../../../../layout/compose-model-1645468598402.xml" value="0.2838709677419355" />
+        <entry key="../../../../layout/compose-model-1645468608089.xml" value="0.25" />
+        <entry key="../../../../layout/compose-model-1645972153262.xml" value="0.27560795873249816" />
         <entry key="..\:/Users/UmarSaidu/StudioProjects/JetPack-Compose-Basics/app/src/main/res/drawable/ic_planet_earth.xml" value="0.3828125" />
         <entry key="..\:/Users/UmarSaidu/StudioProjects/JetPack-Compose-Basics/app/src/main/res/drawable/ic_planet_jupiter.xml" value="0.3828125" />
         <entry key="..\:/Users/UmarSaidu/StudioProjects/JetPack-Compose-Basics/app/src/main/res/drawable/ic_planet_mars.xml" value="0.3828125" />
@@ -89,6 +94,7 @@
         <entry key="..\:/Users/UmarSaidu/StudioProjects/JetPack-Compose-Basics/app/src/main/res/drawable/ic_planet_saturn.xml" value="0.3828125" />
         <entry key="..\:/Users/UmarSaidu/StudioProjects/JetPack-Compose-Basics/app/src/main/res/drawable/ic_planet_uranus.xml" value="0.3828125" />
         <entry key="..\:/Users/UmarSaidu/StudioProjects/JetPack-Compose-Basics/app/src/main/res/drawable/ic_planet_venus.xml" value="0.3828125" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.22916666666666666" />
       </map>
     </option>
   </component>

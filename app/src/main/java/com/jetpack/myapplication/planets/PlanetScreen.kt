@@ -3,7 +3,6 @@ package com.jetpack.myapplication.planets
 import android.app.Activity
 import android.content.res.Configuration
 import android.graphics.drawable.Icon
-import android.graphics.fonts.FontFamily
 import android.media.Image
 import android.view.Surface
 import androidx.compose.animation.AnimatedVisibility
@@ -65,7 +64,7 @@ fun PlanetScreen(planet: Planets) {
                     planet.planetName,
                     color = MaterialTheme.colors.onSurface,
                     style = MaterialTheme.typography.h5,
-                    fontFamily = FontFamily.Monospace,
+                    fontFamily = androidx.compose.ui.text.font.FontFamily.Monospace,
                     fontWeight = FontWeight.Bold,
                 )
                 Spacer(modifier = Modifier.height(5.dp))
@@ -92,7 +91,7 @@ fun PlanetDetailText(planetHolder: String, planetText: String, modifier: Modifie
             planetHolder,
             style = MaterialTheme.typography.caption,
             color = MaterialTheme.colors.onSurface,
-            fontFamily = FontFamily.SansSerif,
+            fontFamily = androidx.compose.ui.text.font.FontFamily.SansSerif,
         )
     }
     Spacer(modifier.height(2.dp))
@@ -100,7 +99,7 @@ fun PlanetDetailText(planetHolder: String, planetText: String, modifier: Modifie
         planetText,
         color = MaterialTheme.colors.onSurface,
         style = MaterialTheme.typography.body1,
-        fontFamily = FontFamily.SansSerif
+        fontFamily = androidx.compose.ui.text.font.FontFamily.SansSerif
     )
     Spacer(modifier.height(5.dp))
 }

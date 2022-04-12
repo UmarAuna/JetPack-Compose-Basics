@@ -18,4 +18,7 @@
     <string name="orbit">Orbit</string>
     <string name="days">Days</string>
     <string name="moon">Moon</string>
+    <string name="internet_not_available">Sorry, your internet connection is currently unavailable.</string>
+
+    <string name="no_network_connectivity">No Network Connectivity</string>
 </resources>
